@@ -1,0 +1,33 @@
+# Everything is ignored unless it is listed below, so nothing personal gets committed by accident.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/firmware/
+!/theme/
+!/tools/
+!/media/
+
+# Never, even inside the folders above: music, recordings, device settings, bookmarks, backups
+*.mp3
+*.flac
+*.m4a
+*.aac
+*.ogg
+*.opus
+*.wav
+*.mkv
+*.mov
+raw*.mp4
+config.cfg
+nvram.bin
+*.bmark
+*backup*/
+simdisk/
+
+# Files the tools write while they run
+*.ppm
+tools/*.png
+tools/editor/*.png
+__pycache__/
+*.pyc

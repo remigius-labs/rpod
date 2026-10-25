@@ -1,0 +1,74 @@
+# Hermit, Now Playing: one dark gilt box 8px under the rule, ending on the menu rule's row, clear of the monk.
+# Box, cover frame and bar frame are baked into hermit-np-bar-v5.bmp; only the live parts are drawn here.
+
+%wd
+%X(hermit-np-bar-v5.bmp)
+
+%Fl(2,16-Terminus.fnt)
+%Fl(3,20-Terminus-Bold.fnt)
+%Fl(4,14-Terminus.fnt)
+%Fl(5,16-Terminus-Bold.fnt)
+
+%xl(battery,battery.bmp,0,0,5)
+%xl(rule,rule.bmp,0,0)
+%xl(lock,lock.bmp,0,0)
+%xl(repeat,repeat-icon.bmp,0,0)
+%xl(shuffle,shuffle-icon.bmp,0,0)
+%xl(repeatone,repeat-one-icon.bmp,0,0)
+%xl(repeatoff,repeat-off-icon.bmp,0,0)
+%xl(shuffleoff,shuffle-off-icon.bmp,0,0)
+%xl(rlogo,rpod-logo.bmp,0,0)
+%xl(playmodes,playmodes.bmp,0,0,9)
+%xl(noart,noart-80.bmp,0,0)
+
+%Vd(top)
+%Vd(hold)
+%Vd(modes)
+%Vd(art)
+%Vd(info)
+%?mv<%Vd(vol)|%Vd(prog)>
+# Top bar: play state (lined up with the panel edge), logo, battery, rule
+%Vl(top,133,1,53,24,-)
+%xd(rlogo)
+%Vl(top,289,6,25,13,-)
+%?if(%bl, >, 88)<%xd(battery,5)|%?if(%bl, >, 63)<%xd(battery,4)|%?if(%bl, >, 38)<%xd(battery,3)|%?if(%bl, >, 13)<%xd(battery,2)|%xd(battery,1)>>>>
+%Vl(top,0,25,320,3,-)
+%xd(rule)
+# Cover, 80px, 6px under the title row
+%Vl(art,18,65,80,80,-)
+%Cl(0,0,80,80,c,c)
+%?C<%Cd|%xd(noart)>
+# Title row across the top of the box: the capitals start on the same row as the icons' gold (y=45).
+# Only the title scrolls.
+%Vl(info,18,43,232,16,5)
+%Vf(e8d9b5)%s%al%?it<%it|%fn>
+# Album / artist / time beside the 80px cover: album letters start level with the cover top, the time
+# sits on the cover bottom, the artist halfway between.
+%Vl(info,108,63,195,16,2)
+%Vf(af9e80)%al%?id<%id|>
+%Vl(info,108,97,195,16,2)
+%Vf(e8d9b5)%al%?ia<%ia|%?iA<%iA|>>
+# While the volume changes (%mv) the time row says Volume / dB and the bar shows the volume instead.
+%Vl(prog,108,131,124,14,4)
+%Vf(e8d9b5)%al%pc / %pt
+%Vl(prog,232,131,71,14,4)
+%Vf(af9e80)%ar%pp of %pe
+%Vl(vol,108,131,124,14,4)
+%Vf(e8d9b5)%alVolume
+%Vl(vol,232,131,71,14,4)
+%Vf(e8d9b5)%ar%pv dB
+# Bar fill inside the baked frame, 6px under the cover
+%Vl(prog,18,155,284,2,-)
+%pb(0,0,284,2,barfill284x2.bmp)
+%Vl(vol,18,155,284,2,-)
+%pv(0,0,284,2,barfill284x2.bmp)
+# Hold switch: gilt lock left of the battery
+%Vl(hold,271,4,16,16,-)
+%?mh<%xd(lock)|>
+# Play state, repeat, shuffle: right end of the title row, fixed slots so nothing moves
+%Vl(modes,254,43,16,16,-)
+%xd(playmodes,%mp)
+%Vl(modes,271,43,16,16,-)
+%?if(%mp, >, 1)<%?mm<%xd(repeatoff)|%xd(repeat)|%xd(repeatone)|%xd(repeat)|%xd(repeat)>|>
+%Vl(modes,289,43,16,16,-)
+%?if(%mp, >, 1)<%?ps<%xd(shuffle)|%xd(shuffleoff)>|>

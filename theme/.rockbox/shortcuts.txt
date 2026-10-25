@@ -1,0 +1,15 @@
+[shortcut]
+type: file
+data: /.rockbox/presets/brightness-night.cfg
+name: Low
+icon: 27
+[shortcut]
+type: file
+data: /.rockbox/presets/brightness-mid.cfg
+name: Mid
+icon: 28
+[shortcut]
+type: file
+data: /.rockbox/presets/brightness-max.cfg
+name: Max
+icon: 5

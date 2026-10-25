@@ -1,0 +1,126 @@
+# Theme by Guillaume Cocatre-Zilgien <gcocatre@gmail.com>
+# CC-BY-SA
+
+# Disable Status Bar
+%wd
+
+# Clear Backdrop
+%X(hermit-menu-bar.bmp)
+
+# Preload Font
+%Fl(2,14-Nimbus.fnt)
+%Fl(4,16-Terminus.fnt)
+%Fl(5,14-Terminus.fnt)
+
+# Preload Images
+%xl(battery,battery.bmp,0,0,5)
+%xl(playmodes,playmodes.bmp,0,0,9)
+%xl(bigmode,playmodes-2x.bmp,0,0,9)
+%xl(rule,rule.bmp,0,0)
+%xl(usbpanel,usbpanel.bmp,0,0)
+%xl(lock,lock.bmp,0,0)
+%xl(repeat,repeat-icon.bmp,0,0)
+%xl(shuffle,shuffle-icon.bmp,0,0)
+%xl(repeatone,repeat-one-icon.bmp,0,0)
+%xl(repeatoff,repeat-off-icon.bmp,0,0)
+%xl(shuffleoff,shuffle-off-icon.bmp,0,0)
+%xl(noart,noart-56.bmp,0,0)
+%xl(I,__list_icons__,0,0)
+%xl(seltop,seltop.bmp,0,0)
+%xl(selcol,selcol.bmp,0,0)
+%xl(coverbox,coverbox.bmp,0,0)
+%xl(barbox,barbox.bmp,0,0)
+%xl(rlogo,rpod-logo.bmp,0,0)
+%xl(monk,monk.bmp,8,8)
+
+# Display Viewports
+%?if(%cs, =, 21)<%Vd(usbscreen)%VI(usbclear)|%?if(%mp, >, 1)<%Vd(panel)%Vd(playing)%VI(short)|%VI(wide)>>
+%Vd(playbackmode)
+%?if(%cs, =, 21)<%Vd(rlogo)|%?Lt<%?if(%Lt, =, Rockbox)<%Vd(rlogo)|%Vd(title)>|%Vd(rlogo)>>
+%Vd(batteryg)
+%Vd(topbar)
+%Vd(hold)
+%Vd(modes)
+
+# Playback Mode Icons
+%Vl(playbackmode,264,173,16,16,-)
+%?if(%mp, >, 1)<%xd(playmodes,%mp)|>
+
+# USB
+%Vl(usb,6,7,34,14,2)
+%alUSB
+
+# Main menu title: RPOD pixel wordmark
+%Vl(rlogo,133,1,53,24,-)
+%xd(rlogo)
+
+# Menu Title (gold, the logo's colour)
+%Vl(title,37,3,246,19,-)
+%ac%?if(%mh, =, h)<[ |>%?if(%lh, =, h)<…|>%?Lt<%?if(%Lt, =, Rockbox)<RPod|%Lt>|RPod>%?if(%lh, =, h)<…|>%?if(%mh, =, h)< ]|>
+
+# Battery (graphical)
+%Vl(batteryg,289,6,25,13,-)
+%?if(%bl, >, 88)<%xd(battery,5)|%?if(%bl, >, 63)<%xd(battery,4)|%?if(%bl, >, 38)<%xd(battery,3)|%?if(%bl, >, 13)<%xd(battery,2)|%xd(battery,1)>>>>
+
+# Battery (numerical)
+%Vl(batteryn,280,7,34,14,2)
+%ar%bl%%
+
+# Top Bar Separator Line
+%Vl(topbar,0,25,320,3,-)
+%xd(rule)
+
+# Menu
+%Vi(usbclear,0,239,1,1,-)
+%Vi(short,0,29,320,135,-)
+%Lb(item,320,22)
+%Vi(wide,0,29,320,209,-)
+%Lb(item,320,22)
+
+
+
+# Player under the menu, only while playing or paused; when stopped the menu takes the full height.
+%Vl(panel,0,165,320,3,-)
+%xd(rule)
+%Vl(panel,6,174,60,60,-)
+%xd(coverbox)
+%Vl(panel,76,227,238,7,-)
+%xd(barbox)
+%Vl(idle,20,188,32,32,-)
+%xd(bigmode,%mp)
+%Vl(playing,8,176,56,56,-)
+%Cl(0,0,56,56,c,c)
+%?C<%Cd|%xd(noart)>
+%Vl(playing,76,176,174,18,4)
+%s%al%?it<%it|%fn>
+%Vl(playing,76,195,236,16,5)
+%al%?ia<%ia|%?iA<%iA|>>
+%Vl(playing,76,211,236,15,5)
+%Vf(968770)%al%?id<%id|>
+%Vl(playing,78,229,234,3,-)
+%pb(0,0,234,3,barfill.bmp)
+
+# Skinned list rows. Selected: the invert style marks the row, which the RPod firmware draws as a
+# see-through gold wash with dark letterpress text; a dark + lit edge runs along the top. Text layers
+# clear their own background, so images go after them.
+%Vl(item,18,0,302,22,1)
+%?Lc<%Vf(c9a24f)%Vb(120d0a)%Vs(invert)%s|%Vf(e8d9b5)%s>%LT
+%Vl(item,0,0,1,22,-)
+%?Lc<%Vf(c9a24f)%Vb(120d0a)%Vs(invert)|>
+%Vl(item,1,1,17,21,-)
+%?Lc<%Vf(c9a24f)%Vb(3b2a14)%Vs(invert)|>%?if(%LI, <, 0)<|%xd(I,%LI,2)>
+%Vl(item,0,0,320,2,-)
+%?Lc<%xd(seltop)|>
+# Hold switch: gilt lock left of the battery
+%Vl(hold,271,4,16,16,-)
+%?mh<%xd(lock)|>
+# Repeat then shuffle after the play icon, in fixed spots so turning one on never moves the other
+%Vl(modes,281,173,16,16,-)
+%?if(%mp, >, 1)<%?mm<%xd(repeatoff)|%xd(repeat)|%xd(repeatone)|%xd(repeat)|%xd(repeat)>|>
+%Vl(modes,299,173,16,16,-)
+%?if(%mp, >, 1)<%?ps<%xd(shuffle)|%xd(shuffleoff)>|>
+# USB screen (activity 21): gilt panel with the plug and "USB Connected" baked into one image,
+# because a live text line under an image is wiped when the image redraws on a partial refresh.
+# Plug: RPod pixel drawing to USB-A proportions (1px = 1mm), flat gilt like the icons.
+%Vl(usbscreen,18,46,284,176,-)
+%xd(usbpanel)

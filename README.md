@@ -69,8 +69,21 @@ set up to boot straight into the RPod look and menus. Sound settings stay at Roc
 The zip writes over the iPod's `.rockbox` folder, settings included, so back it up first if you have
 one. Your music is untouched, and so is the bootloader.
 
-For album covers while browsing, run `tools/make-thumbs.sh` on your music folder and copy the
-thumbnails over. Albums are expected as `Artists/<artist>/<album>/`.
+### Album covers
+
+The covers while browsing come from small thumbnails in each album folder. `tools/make-thumbs.sh`
+makes them from the album's `cover.jpg` (or `folder.jpg`, `front.jpg`), or else from the first
+song's embedded art. Albums are expected as `Artists/<artist>/<album>/`. It runs on Linux and macOS
+and needs ImageMagick and ffmpeg.
+
+```sh
+# make the thumbnails in a staging folder; nothing on the iPod is touched yet
+tools/make-thumbs.sh /path/to/IPOD/Artists ~/rpod-thumbs
+# copy only the thumbnails onto the iPod
+rsync -rtm --include='*/' --include='cover.*x*.bmp' --exclude='*' ~/rpod-thumbs/ /path/to/IPOD/Artists/
+```
+
+Albums it finds no art for are listed in `~/rpod-thumbs/no-art.txt`.
 
 ## Build the firmware
 

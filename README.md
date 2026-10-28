@@ -10,19 +10,13 @@ while browsing, a sleep timer) and one custom theme, Hermit, that every screen i
 
 ## The look
 
-- **The painting.** A dithered monk painting sits behind every menu. The boot splash shows it full
-  screen with the RPOD logo at 3x; shutdown shows it dimmed with the message in gilt.
-- **Gilt.** Icons are gold, drawn pixel by pixel. Menu titles are drawn like the logo: dark rim,
-  gold body, lit top-left edge.
-- **The selected row.** A see-through gold wash, so the painting shows through the row you are on.
-  The text is letterpressed, with a soft lit edge under each letter.
-- **Now Playing.** One gilt panel: the song on top, the cover with album, artist and time beside
-  it, a thin progress bar below. Turning the wheel swaps the time for the volume. The menus keep a
-  small player panel under the list while something plays.
-- **Popups, yes/no questions and the quick screen.** These darken the painting to the same tint as
-  the top bar. The question is gilt, the choices cream, and long lines wrap at a sentence end.
-- **Busy screens.** The whole area darkens and a gilt progress bar fills.
-- **Scrollbar.** Gilt, spanning the whole list, lined up with the battery and the mode icons.
+- **The painting.** A Karl Friedrich Schinkel landscape, dithered for the iPod screen, behind every
+  menu. It also fills the boot and shutdown screens.
+- **Gilt.** Gold icons, drawn pixel by pixel, and menu titles in the style of the logo.
+- **The selection.** A see-through gold row with letterpressed text, so the painting shows through.
+- **Now Playing.** One gilt panel: song, cover, album, artist, time and a thin progress bar. While
+  music plays, the menus keep a small player under the list.
+- **Popups.** Questions, messages and the quick screen darken the painting instead of drawing a box.
 
 ## What changed from stock Rockbox
 

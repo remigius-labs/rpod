@@ -28,7 +28,7 @@ About 1,100 lines of C on top of stock Rockbox. Release by release: `CHANGELOG.m
 
 **Browsing**
 - Album cards: open an artist under `/Artists` and every album shows as a card with its cover and
-  name. An album without art gets the monk. Only the rows on screen load their cover, and a few
+  name. An album without art gets a default card. Only the rows on screen load their cover, and a few
   stay cached. "All Songs" is pinned first.
 - Bookmarks as cards: cover, book name and time.
 - Files: a gold icon for every kind of file. A playlist opened here shows its songs, and play
@@ -36,11 +36,6 @@ About 1,100 lines of C on top of stock Rockbox. Release by release: `CHANGELOG.m
 - Files and Playlists from the main menu always open at the top, never in the last folder or
   playlist you were in.
 - Every song in a playlist has the note icon.
-
-**Volume**
-- Volume reads 0 to 100, in even steps: every click moves it the same amount.
-- The volume bar is full at 100.
-- The volume limit is fixed at 0 dB. Above that, Rockbox pushes the output into distortion.
 
 **Menus**
 - Main menu, Settings and the Now Playing menu trimmed to six items each, with the icons lined up
@@ -51,12 +46,16 @@ About 1,100 lines of C on top of stock Rockbox. Release by release: `CHANGELOG.m
 - Repeat is Off, All or One. A-B repeat and repeat-shuffle are gone.
 - Shorter menu names through a custom language file.
 
+**Volume**
+- Volume reads 0 to 100, in even steps: every click moves it the same amount.
+- The volume bar is full at 100.
+- The volume limit is fixed at 0 dB. Above that, Rockbox pushes the output into distortion.
+
 **Small things**
 - Song titles on screen drop remaster notes: "Song (2011 Remaster)" shows "Song". Files and tags
   stay as they are.
 - A line still scrolling from the previous screen stops before the next one draws.
 - The selected row keeps its highlight after the list wraps around.
-- The shutdown screen no longer crashes.
 
 ## Install
 

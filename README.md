@@ -10,6 +10,8 @@ while browsing, a sleep timer) and one custom theme, Hermit, that every screen i
 
 ## The look
 
+- **Album covers while browsing.** Open an artist and every album shows up with its cover, so you
+  pick by sight. Stock Rockbox and its themes only show covers on Now Playing.
 - **The backdrop.** A Karl Friedrich Schinkel landscape, dithered for the iPod screen, behind every
   menu. It also fills the boot and shutdown screens.
 - **Gold.** Icons drawn pixel by pixel, and menu titles in the style of the logo.

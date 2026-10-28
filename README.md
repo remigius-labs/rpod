@@ -10,13 +10,13 @@ while browsing, a sleep timer) and one custom theme, Hermit, that every screen i
 
 ## The look
 
-- **The painting.** A Karl Friedrich Schinkel landscape, dithered for the iPod screen, behind every
+- **The backdrop.** A Karl Friedrich Schinkel landscape, dithered for the iPod screen, behind every
   menu. It also fills the boot and shutdown screens.
 - **Gilt.** Gold icons, drawn pixel by pixel, and menu titles in the style of the logo.
-- **The selection.** A see-through gold row with letterpressed text, so the painting shows through.
+- **The selection.** A see-through gold row with letterpressed text, so the backdrop shows through.
 - **Now Playing.** One gilt panel: song, cover, album, artist, time and a thin progress bar. While
   music plays, the menus keep a small player under the list.
-- **Popups.** Questions, messages and the quick screen darken the painting instead of drawing a box.
+- **Popups.** Questions, messages and the quick screen darken the backdrop instead of drawing a box.
 
 ## What changed from stock Rockbox
 
@@ -110,4 +110,4 @@ Design tools used to make the theme, in `tools/`. They expect a Rockbox simulato
 
 - Firmware patch and tools: GPL-2.0, like Rockbox (see `LICENSE`).
 - Theme: CC BY-SA 3.0, starting from PodOne, a theme by Guillaume Cocatre-Zilgien (see `theme/LICENSE`).
-- The painting behind the theme is by Karl Friedrich Schinkel (1781-1841), public domain.
+- The backdrop is a painting by Karl Friedrich Schinkel (1781-1841), public domain.

@@ -18,4 +18,4 @@
 
 **Theme**
 - The brightness shortcuts (Low, Mid, Max) set the brightness directly. They work with any file filter.
-- Now Playing and the radio screen show volume as 0 to 100.
+- Now Playing shows volume as 0 to 100.

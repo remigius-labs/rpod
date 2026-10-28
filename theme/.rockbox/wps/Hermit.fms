@@ -73,7 +73,7 @@
 
 # Volume
 %Vl(volume,6,205,56,19,-)
-%ac%?if(%pv, >, 0)<+|>%pvdB
+%ac%pv
 
 # Volume Bar
 %Vl(volume,63,205,245,17,-)

@@ -48,7 +48,7 @@
 %Vf(af9e80)%al%?id<%id|>
 %Vl(info,108,97,195,16,2)
 %Vf(e8d9b5)%al%?ia<%ia|%?iA<%iA|>>
-# While the volume changes (%mv) the time row says Volume / dB and the bar shows the volume instead.
+# While the volume changes (%mv) the time row says Volume / 0-100 and the bar shows the volume instead.
 %Vl(prog,108,131,124,14,4)
 %Vf(e8d9b5)%al%pc / %pt
 %Vl(prog,232,131,71,14,4)
@@ -56,7 +56,7 @@
 %Vl(vol,108,131,124,14,4)
 %Vf(e8d9b5)%alVolume
 %Vl(vol,232,131,71,14,4)
-%Vf(e8d9b5)%ar%pv dB
+%Vf(e8d9b5)%ar%pv
 # Bar fill inside the baked frame, 6px under the cover
 %Vl(prog,18,155,284,2,-)
 %pb(0,0,284,2,barfill284x2.bmp)

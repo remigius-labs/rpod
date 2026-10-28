@@ -12,11 +12,15 @@ painting shows through the row you are on. Now Playing is one gilt panel: the so
 with album, artist and time beside it, a thin progress bar below. The menu keeps a small player
 panel under the list while something plays.
 
-**The firmware changes.** About 450 lines of C on top of stock Rockbox:
+**The firmware changes.** About 1,100 lines of C on top of stock Rockbox (what changed when: `CHANGELOG.md`):
 
 - Album covers while browsing: open an artist's folder and every album row shows its cover in a
   gilt frame, the name beside it. Only the rows on screen load their cover, a few stay cached, and
   an album without art gets a small default card. An artist's "All Songs" playlist is pinned first.
+- Volume as 0 to 100 in even steps, the bar full at 100, the limit fixed at 0 dB.
+- Files and Playlists from the main menu always open at the top. A playlist opened in Files shows
+  its songs, each with the note icon.
+- Bookmarks as cards (cover, book name, time) and gilt icons for every kind of file.
 - Sleep in the Now Playing menu: 15 / 30 / 60 minutes, or End of track, which pauses when the
   current file ends (one file per chapter makes it "end of chapter" for audiobooks).
 - Prompts and popups on the darkened painting: yes/no questions, the quick screen and messages draw

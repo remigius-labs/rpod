@@ -16,7 +16,6 @@ while browsing, a sleep timer) and one custom theme, Hermit, that every screen i
 - **The selection.** A see-through gold row with letterpressed text, so the backdrop shows through.
 - **Now Playing.** One gold panel: song, cover, album, artist, time and a thin progress bar. While
   music plays, the menus keep a small player under the list.
-- **Popups.** Questions, messages and the quick screen darken the backdrop instead of drawing a box.
 
 ## What changed from stock Rockbox
 

@@ -71,8 +71,9 @@ one. Your music is untouched, and so is the bootloader.
 
 ### Album covers
 
-The covers while browsing come from small thumbnails in each album folder. `tools/make-thumbs.sh`
-makes them from the album's `cover.jpg` (or `folder.jpg`, `front.jpg`), or else from the first
+The covers come from small thumbnails in each album folder, in three sizes: 32x32 for the album
+rows, 56x56 for the player under the menus and 80x80 for Now Playing. `tools/make-thumbs.sh` makes
+all three from the album's `cover.jpg` (or `folder.jpg`, `front.jpg`), or else from the first
 song's embedded art. Albums are expected as `Artists/<artist>/<album>/`. It runs on Linux and macOS
 and needs ImageMagick and ffmpeg.
 

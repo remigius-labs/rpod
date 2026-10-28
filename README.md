@@ -59,8 +59,7 @@ About 1,100 lines of C on top of stock Rockbox. Release by release: `CHANGELOG.m
 
 ## Install
 
-> **Use at your own risk.** RPod comes with no warranty. iPod drives and music databases are
-> fragile: an interrupted copy, an unclean unplug or a bad firmware can corrupt the database or the
+> **Use at your own risk.** iPod drives and music databases are fragile: an interrupted copy, an unclean unplug or a bad firmware can corrupt the database or the
 > drive. Back up your music and your `.rockbox` folder before installing.
 >
 > **Every time you copy anything onto the iPod** (the zip, covers, music), eject it properly and

@@ -98,18 +98,20 @@ Albums it finds no art for are listed in `~/rpod-thumbs/no-art.txt`.
 
 ## Build the firmware
 
-The patch applies to Rockbox commit `59cc0282ec38919e22b7448d0f24c0713da4c21e`.
+The full source, with every change as its own commit, is the `rpod` branch of the Rockbox fork:
+[github.com/remigius-labs/rockbox/tree/rpod](https://github.com/remigius-labs/rockbox/tree/rpod).
+It sits on top of Rockbox commit `59cc0282ec38919e22b7448d0f24c0713da4c21e`.
 
 ```sh
-git clone https://git.rockbox.org/cgit/rockbox.git
+git clone -b rpod https://github.com/remigius-labs/rockbox.git
 cd rockbox
-git checkout 59cc0282ec38919e22b7448d0f24c0713da4c21e
-git apply ../rpod/firmware/rpod.patch
 # ARM toolchain: tools/rockboxdev.sh, then:
 mkdir build-ipod6g && cd build-ipod6g
 ../tools/configure --target=29 --type=n
 make -j8 && make zip
 ```
+
+The same changes as one file: `firmware/rpod.patch`, which applies to that commit with `git apply`.
 
 The custom language file (shorter menu names) builds with `make $PWD/apps/lang/remi.lng` inside the
 build folder; a prebuilt one is in `theme/.rockbox/langs/`.

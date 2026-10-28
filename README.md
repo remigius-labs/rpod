@@ -48,7 +48,8 @@ About 1,100 lines of C on top of stock Rockbox. Release by release: `CHANGELOG.m
 - Sleep in the Now Playing menu: 15, 30 or 60 minutes, or End of track, which pauses when the
   current file ends (one file per chapter makes it "end of chapter" for audiobooks).
 - Brightness gets its own shortcut folder: Low, Mid, Max.
-- Repeat is Off, All or One. Shorter menu names through a custom language file.
+- Repeat is Off, All or One. A-B repeat and repeat-shuffle are gone.
+- Shorter menu names through a custom language file.
 
 **Small things**
 - Song titles on screen drop remaster notes: "Song (2011 Remaster)" shows "Song". Files and tags

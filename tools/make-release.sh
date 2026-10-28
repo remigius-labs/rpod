@@ -23,6 +23,7 @@ done
 cat "$r/themes/Hermit.cfg" "$r/rpod.cfg" > "$r/config.cfg"
 rm "$r/rpod.cfg"
 cp "$repo/theme/LICENSE" "$r/RPOD-THEME-LICENSE.txt"
+cp "$repo/theme/FONTS.txt" "$r/fonts/FONTS.txt"
 rm -f "$out"
 zip -qr9 "$out" .rockbox
 echo "$out"

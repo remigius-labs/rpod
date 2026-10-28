@@ -59,16 +59,21 @@ About 1,100 lines of C on top of stock Rockbox. Release by release: `CHANGELOG.m
 
 ## Install
 
-You need an iPod Classic already running Rockbox (bootloader installed).
+One zip, everything in it: the RPod firmware, codecs, plugins, the theme, fonts and language,
+set up to boot straight into the RPod look.
 
-1. Build the firmware (below) or use a release zip, and copy its `.rockbox` folder onto the iPod.
-2. Install the Rockbox font pack (the theme uses its Terminus and Nimbus fonts).
-3. Copy `theme/.rockbox/` onto the iPod's `.rockbox/` folder.
-4. On the iPod: Settings > Theme > Browse Theme Files > Hermit.
-5. For album covers while browsing, run `tools/make-thumbs.sh` on your music folder and copy the
-   thumbnails over. Albums are expected as `Artists/<artist>/<album>/`.
+1. **First time on Rockbox?** Install the Rockbox bootloader once with
+   [Rockbox Utility](https://www.rockbox.org/wiki/RockboxUtility), the official installer. Already
+   running Rockbox: skip this.
+2. Download `rpod-ipod6g-<date>.zip` from
+   [Releases](https://github.com/remigius-labs/rpod/releases).
+3. Plug in the iPod, unzip onto it so the `.rockbox` folder lands at the top of the drive, eject.
 
-Back up the iPod's `.rockbox` folder first. The bootloader is never touched.
+The zip writes over the iPod's `.rockbox` folder, settings included, so back it up first if you have
+one. Your music is untouched, and so is the bootloader.
+
+For album covers while browsing, run `tools/make-thumbs.sh` on your music folder and copy the
+thumbnails over. Albums are expected as `Artists/<artist>/<album>/`.
 
 ## Build the firmware
 

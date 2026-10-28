@@ -59,6 +59,11 @@ About 1,100 lines of C on top of stock Rockbox. Release by release: `CHANGELOG.m
 
 ## Install
 
+> **Use at your own risk.** RPod comes with no warranty. iPod drives and music databases are
+> fragile: an interrupted copy, an unclean unplug or a bad firmware can corrupt the database or the
+> drive. Back up your music and your `.rockbox` folder before installing, and always eject before
+> unplugging.
+
 One zip, everything in it: the RPod firmware, codecs, plugins, the theme, fonts and language,
 set up to boot straight into the RPod look and menus. Sound settings stay at Rockbox defaults.
 

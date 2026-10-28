@@ -61,8 +61,11 @@ About 1,100 lines of C on top of stock Rockbox. Release by release: `CHANGELOG.m
 
 > **Use at your own risk.** RPod comes with no warranty. iPod drives and music databases are
 > fragile: an interrupted copy, an unclean unplug or a bad firmware can corrupt the database or the
-> drive. Back up your music and your `.rockbox` folder before installing, and always eject before
-> unplugging.
+> drive. Back up your music and your `.rockbox` folder before installing.
+>
+> **Every time you copy anything onto the iPod** (the zip, covers, music), eject it properly and
+> wait until it is fully unmounted before you unplug. On Linux: `sync`, then
+> `udisksctl unmount -b /dev/sdX1`. Pulling the cable mid-write is the most common way to corrupt it.
 
 One zip, everything in it: the RPod firmware, codecs, plugins, the theme, fonts and language,
 set up to boot straight into the RPod look and menus. Sound settings stay at Rockbox defaults.
@@ -90,6 +93,8 @@ and needs ImageMagick and ffmpeg.
 tools/make-thumbs.sh /path/to/IPOD/Artists ~/rpod-thumbs
 # copy only the thumbnails onto the iPod
 rsync -rtm --include='*/' --include='cover.*x*.bmp' --exclude='*' ~/rpod-thumbs/ /path/to/IPOD/Artists/
+# eject properly before unplugging
+sync && udisksctl unmount -b /dev/sdX1
 ```
 
 Albums it finds no art for are listed in `~/rpod-thumbs/no-art.txt`.

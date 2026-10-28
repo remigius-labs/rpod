@@ -2,9 +2,12 @@
 
 Modernized Rockbox with a custom theme for the iPod Classic.
 
-RPod is the Rockbox fork I wanted for my iPod Classic. It adds quality of life improvements on top
-of stock Rockbox (album covers while browsing, Files and Playlists that open where you expect, a
-sleep timer) and one custom theme, Hermit, that every screen is built for.
+RPod is the Rockbox fork I wanted for my iPod Classic. On top of stock Rockbox:
+
+- Album covers while browsing
+- Files and Playlists that open where you expect
+- A sleep timer
+- One custom theme, Hermit, that every screen is built for
 
 ![RPod on an iPod Classic](media/rpod.gif)
 

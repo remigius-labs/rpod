@@ -1,8 +1,10 @@
 # RPod
 
-Rockbox for the iPod Classic (6th/7th gen), modernized around one art style: a dithered painting of
-a hermit, with gold gilt icons, titles and selection drawn to match. RPod has one look, and every
-screen is built for it.
+Modernized Rockbox with a custom theme for the iPod Classic.
+
+RPod is the Rockbox fork I wanted for my iPod Classic. It adds quality of life improvements on top
+of stock Rockbox (volume as 0 to 100, Files and Playlists that open where you expect, album covers
+while browsing, a sleep timer) and one custom theme, Hermit, that every screen is built for.
 
 ![RPod on an iPod Classic](media/rpod.gif)
 
@@ -60,7 +62,7 @@ About 1,100 lines of C on top of stock Rockbox. Release by release: `CHANGELOG.m
 ## Install
 
 One zip, everything in it: the RPod firmware, codecs, plugins, the theme, fonts and language,
-set up to boot straight into the RPod look.
+set up to boot straight into the RPod look and menus. Sound settings stay at Rockbox defaults.
 
 1. **First time on Rockbox?** Install the Rockbox bootloader once with
    [Rockbox Utility](https://www.rockbox.org/wiki/RockboxUtility), the official installer. Already
@@ -101,6 +103,7 @@ Design tools used to make the theme, in `tools/`. They expect a Rockbox simulato
 - `icons.py`, `usb-medallion.py`, `mock.py`, `rbfont.py`: icon set, USB screen, offline screen mocks
   drawn with the real Rockbox fonts.
 - `make-thumbs.sh`: the album cover thumbnails.
+- `make-release.sh`: builds the one-zip release from a firmware build.
 - `take.sh`: records a scripted run through the simulator in a hidden X display (the GIF above).
 
 ## Limits

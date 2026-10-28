@@ -120,6 +120,8 @@ Design tools used to make the theme, in `tools/`. They expect a Rockbox simulato
 
 ## Limits
 
+- RPod is built for my own iPods and shared for anyone curious. The release zip has only been used
+  on my own devices and is untested as a fresh install, so back up first and use it at your own risk.
 - Built and tested on the iPod Classic 7th gen (Rockbox target ipod6g), 320x240 only.
 - Albums split into CD 1 / CD 2 folders do not show a cover in the album rows yet.
 - The theme's colours are tuned for the iPod screen; the simulator looks brighter.

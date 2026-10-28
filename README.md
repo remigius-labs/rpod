@@ -40,7 +40,7 @@ About 1,100 lines of C on top of stock Rockbox. Release by release: `CHANGELOG.m
 **Volume**
 - Volume reads 0 to 100, in even steps: every click moves it the same amount.
 - The volume bar is full at 100.
-- The volume limit is fixed at 0 dB, so the headphone output stays at a sane level.
+- The volume limit is fixed at 0 dB. Above that, Rockbox pushes the output into distortion.
 
 **Menus**
 - Main menu, Settings and the Now Playing menu trimmed to six items each, with the icons lined up

@@ -115,5 +115,5 @@ Design tools used to make the theme, in `tools/`. They expect a Rockbox simulato
 ## License
 
 - Firmware patch and tools: GPL-2.0, like Rockbox (see `LICENSE`).
-- Theme: CC BY-SA 3.0, starting from a theme by Guillaume Cocatre-Zilgien (see `theme/LICENSE`).
+- Theme: CC BY-SA 3.0, starting from PodOne, a theme by Guillaume Cocatre-Zilgien (see `theme/LICENSE`).
 - The painting behind the theme is by Karl Friedrich Schinkel (1781-1841), public domain.

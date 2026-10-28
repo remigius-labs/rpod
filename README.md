@@ -12,9 +12,9 @@ while browsing, a sleep timer) and one custom theme, Hermit, that every screen i
 
 - **The backdrop.** A Karl Friedrich Schinkel landscape, dithered for the iPod screen, behind every
   menu. It also fills the boot and shutdown screens.
-- **Gilt.** Gold icons, drawn pixel by pixel, and menu titles in the style of the logo.
+- **Gold.** Icons drawn pixel by pixel, and menu titles in the style of the logo.
 - **The selection.** A see-through gold row with letterpressed text, so the backdrop shows through.
-- **Now Playing.** One gilt panel: song, cover, album, artist, time and a thin progress bar. While
+- **Now Playing.** One gold panel: song, cover, album, artist, time and a thin progress bar. While
   music plays, the menus keep a small player under the list.
 - **Popups.** Questions, messages and the quick screen darken the backdrop instead of drawing a box.
 
@@ -27,7 +27,7 @@ About 1,100 lines of C on top of stock Rockbox. Release by release: `CHANGELOG.m
   name. An album without art gets the monk. Only the rows on screen load their cover, and a few
   stay cached. "All Songs" is pinned first.
 - Bookmarks as cards: cover, book name and time.
-- Files: a gilt icon for every kind of file. A playlist opened here shows its songs, and play
+- Files: a gold icon for every kind of file. A playlist opened here shows its songs, and play
   starts from the song you pick.
 - Files and Playlists from the main menu always open at the top, never in the last folder or
   playlist you were in.

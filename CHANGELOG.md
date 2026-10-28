@@ -11,10 +11,10 @@
 - Files and Playlists from the main menu open at the top, not in the last folder or playlist you were in.
 - Opening a playlist in Files shows its songs. Play starts from the song you pick.
 - Every song in a playlist has the note icon.
-- Gilt icons for folders and every kind of file.
+- Gold icons for folders and every kind of file.
 - Bookmarks show one card per bookmark: cover, book name and time.
 - Every artist folder under /Artists gets album cards, with or without covers.
-- Busy screens darken the whole area and show a gilt progress bar.
+- Busy screens darken the whole area and show a gold progress bar.
 
 **Theme**
 - The brightness shortcuts (Low, Mid, Max) set the brightness directly. They work with any file filter.

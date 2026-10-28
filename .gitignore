@@ -32,3 +32,6 @@ tools/*.png
 tools/editor/*.png
 __pycache__/
 *.pyc
+
+# Local only
+tools/editor/

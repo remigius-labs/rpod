@@ -51,7 +51,7 @@ G = {
 # Rockbox themable_icons order, Icon_Audio .. Icon_Rockbox (32)
 # Brightness shortcuts reuse slots the Classic never shows: 5 Firmware = Max, 27 Remote display = Low, 28 Radio = Mid
 # Sleep (Now Playing context menu) uses 21 Recording: moon. 31 Main Menu reuses the playlist stack.
-# Slots 0 (note), 4 (theme), 14 (trash) and 21 (moon) are drawn by hand in the editor (editor/),
+# Slots 0 (note), 4 (theme), 14 (trash) and 21 (moon) are drawn by hand
 # straight into rpod-gilt.bmp: regenerating the iconset from this file would overwrite them.
 ICONS = ["note", "folder", "list", "chevron", "play", "lvl_max", "dot", "gear", "gear", "dot", "ribbon", "sun",
          "note", "dot", "dot", "chevron", "dot", "gear", "chevron", "chevron", "gear", "moon", "dot", "gear",

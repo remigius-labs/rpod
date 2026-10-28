@@ -1,37 +1,61 @@
 # RPod
 
-A Rockbox fork and theme for the iPod Classic (6th/7th gen), built around a painting.
+Rockbox for the iPod Classic (6th/7th gen), modernized around one art style: a dithered painting of
+a hermit, with gold gilt icons, titles and selection drawn to match. RPod has one look, and every
+screen is built for it.
 
 ![RPod on an iPod Classic](media/rpod.gif)
 
-## What it is
+## The look
 
-**The theme (Hermit).** A dithered painting behind every menu, gold gilt icons drawn pixel by pixel,
-gilt menu titles in the same style as the RPOD logo, and a see-through gold selection so the
-painting shows through the row you are on. Now Playing is one gilt panel: the song on top, the cover
-with album, artist and time beside it, a thin progress bar below. The menu keeps a small player
-panel under the list while something plays.
+- **The painting.** A dithered monk painting sits behind every menu. The boot splash shows it full
+  screen with the RPOD logo at 3x; shutdown shows it dimmed with the message in gilt.
+- **Gilt.** Icons are gold, drawn pixel by pixel. Menu titles are drawn like the logo: dark rim,
+  gold body, lit top-left edge.
+- **The selected row.** A see-through gold wash, so the painting shows through the row you are on.
+  The text is letterpressed, with a soft lit edge under each letter.
+- **Now Playing.** One gilt panel: the song on top, the cover with album, artist and time beside
+  it, a thin progress bar below. Turning the wheel swaps the time for the volume. The menus keep a
+  small player panel under the list while something plays.
+- **Popups, yes/no questions and the quick screen.** These darken the painting to the same tint as
+  the top bar. The question is gilt, the choices cream, and long lines wrap at a sentence end.
+- **Busy screens.** The whole area darkens and a gilt progress bar fills.
+- **Scrollbar.** Gilt, spanning the whole list, lined up with the battery and the mode icons.
 
-**The firmware changes.** About 1,100 lines of C on top of stock Rockbox (what changed when: `CHANGELOG.md`):
+## What changed from stock Rockbox
 
-- Album covers while browsing: open an artist's folder and every album row shows its cover in a
-  gilt frame, the name beside it. Only the rows on screen load their cover, a few stay cached, and
-  an album without art gets a small default card. An artist's "All Songs" playlist is pinned first.
-- Volume as 0 to 100 in even steps, the bar full at 100, the limit fixed at 0 dB.
-- Files and Playlists from the main menu always open at the top. A playlist opened in Files shows
-  its songs, each with the note icon.
-- Bookmarks as cards (cover, book name, time) and gilt icons for every kind of file.
-- Sleep in the Now Playing menu: 15 / 30 / 60 minutes, or End of track, which pauses when the
+About 1,100 lines of C on top of stock Rockbox. Release by release: `CHANGELOG.md`.
+
+**Browsing**
+- Album cards: open an artist under `/Artists` and every album shows as a card with its cover and
+  name. An album without art gets the monk. Only the rows on screen load their cover, and a few
+  stay cached. "All Songs" is pinned first.
+- Bookmarks as cards: cover, book name and time.
+- Files: a gilt icon for every kind of file. A playlist opened here shows its songs, and play
+  starts from the song you pick.
+- Files and Playlists from the main menu always open at the top, never in the last folder or
+  playlist you were in.
+- Every song in a playlist has the note icon.
+
+**Volume**
+- Volume reads 0 to 100, in even steps: every click moves it the same amount.
+- The volume bar is full at 100.
+- The volume limit is fixed at 0 dB, so the headphone output stays at a sane level.
+
+**Menus**
+- Main menu, Settings and the Now Playing menu trimmed to six items each, with the icons lined up
+  row by row across them.
+- Sleep in the Now Playing menu: 15, 30 or 60 minutes, or End of track, which pauses when the
   current file ends (one file per chapter makes it "end of chapter" for audiobooks).
-- Prompts and popups on the darkened painting: yes/no questions, the quick screen and messages draw
-  on the same dark tint as the top bar, with the question gilt and the choices in cream.
-- A boot splash and a shutdown screen in the same style.
-- Remaster notes dropped from song titles on screen ("Song (2011 Remaster)" shows "Song"). The files
-  and tags are untouched.
-- Menus trimmed to six items each (main menu, Settings, Now Playing menu), with the icons lined up
-  row by row across them. Repeat is Off / All / One.
-- Two list fixes: a line still scrolling from the previous screen no longer draws over the next one,
-  and the selected row keeps its highlight after the list wraps around.
+- Brightness gets its own shortcut folder: Low, Mid, Max.
+- Repeat is Off, All or One. Shorter menu names through a custom language file.
+
+**Small things**
+- Song titles on screen drop remaster notes: "Song (2011 Remaster)" shows "Song". Files and tags
+  stay as they are.
+- A line still scrolling from the previous screen stops before the next one draws.
+- The selected row keeps its highlight after the list wraps around.
+- The shutdown screen no longer crashes.
 
 ## Install
 
@@ -69,8 +93,6 @@ build folder; a prebuilt one is in `theme/.rockbox/langs/`.
 Design tools used to make the theme, in `tools/`. They expect a Rockbox simulator build; set
 `RPOD_SIM` to its folder (default `../../rockbox/build-sim`).
 
-- `editor/`: a local pixel editor for the logo and icons, with a live preview of the menu they sit in
-  (`python3 editor/server.py`, then http://127.0.0.1:8765).
 - `icons.py`, `usb-medallion.py`, `mock.py`, `rbfont.py`: icon set, USB screen, offline screen mocks
   drawn with the real Rockbox fonts.
 - `make-thumbs.sh`: the album cover thumbnails.
